@@ -29,8 +29,7 @@ cd pdf-overlapper
 
 ## Usage
 1. Place your target PDF file in the project directory.
-2. Rename the file to `UBT-04.pdf` or update `input_file_name` in the `main.py` file.
-3. Add a mark sheet image as `mark_sheet.png` (if needed).
+2. Rename the file like `UBT-04.pdf` and update `input_file_name` in the `main.py` file.
 4. Run the script:
 
 ```sh
