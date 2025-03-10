@@ -1,14 +1,12 @@
 # PDF Cleanup Tool for New Light Institute's Test Paper
 
 ## Overview
-This Python package processes a specific type of PDF file used in the NEET examination test paper series by New Light Institute. Each page is divided into two halves: Hindi questions on the left and English questions on the right. The script removes the Hindi section and replaces it with the next page's English section, effectively creating a clean, English-only version of the document.
+This Python package cleans up test paper pdfs provided by "*New Light Institute*" for NEET Examination.Their provided pdfs' pages is divided into two halves: Hindi questions on the left and English questions on the right. The script removes the Hindi section and replaces it with the next page's English section, effectively creating a clean, English-only version of the document.You can save 50% of pages if you intend to print it.
 
 ## Features
-- **Remove Hindi Section**: Automatically removes the Hindi section from each page.
-- **Replace with English Questions**: Replaces the removed Hindi section with the English questions from the next page.
-- **Customizable Margins**: Allows customization of top and side margins for precise cropping.
+- **Remove Hindi Section**: Automatically replace the Hindi section from each page with english which results in 50% page reduction.
 - **Delete Extra Pages**: Option to delete promotional or instruction pages from the start and end of the PDF.
-- **Add Mark Sheet**: Adds a mark sheet image to the front page of the PDF.
+- **Add Mark Sheet**: Adds a mark sheet image to the front page of the PDF which can be used for analysing tests.
 
 ## Prerequisites
 Ensure you have the following dependencies installed:
@@ -17,8 +15,6 @@ Ensure you have the following dependencies installed:
 pip install pillow pdf2image
 ```
 
-Additionally, download and install [Poppler](https://github.com/oschwartz10612/poppler-windows/releases) for Windows users. Set the `poppler_path` accordingly in the script.
-(Currently shipped with this repo)
 ## Installation
 Clone the repository and navigate into the project folder:
 
@@ -41,8 +37,8 @@ The cleaned PDF will be generated with the name `<original_name>-Paper-Clean.pdf
 ## Configuration
 Modify the following variables in the script(`main.py`) for customization:
 
-- `english_on_right`: Set `True` if English questions are on the right side.
-- `delete_page_from_start`: Number of pages to remove from the beginning.
+- `english_on_right`: Set `True` if English questions are on the right side of the orginal pdf.
+- `delete_page_from_start`: Number of pages to remove from the beginning(skiping the first page).
 - `delete_page_from_end`: Number of pages to remove from the end.
 - `top_margin` & `left_margin`: Adjust cropping values.
 
