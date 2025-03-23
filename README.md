@@ -1,14 +1,17 @@
 # PDF Cleanup Tool for New Light Institute's Test Paper
 
 ## Overview
-This Python package cleans up test paper pdfs provided by "*New Light Institute*" for NEET Examination.Their provided pdfs' pages is divided into two halves: Hindi questions on the left and English questions on the right. The script removes the Hindi section and replaces it with the next page's English section, effectively creating a clean, English-only version of the document.You can save 50% of pages if you intend to print it.
+
+This Python package cleans up test paper pdfs provided by "_New Light Institute_" for NEET Examination.Their provided pdfs' pages is divided into two halves: Hindi questions on the left and English questions on the right. The script removes the Hindi section and replaces it with the next page's English section, effectively creating a clean, English-only version of the document.You can save 50% of pages if you intend to print it.
 
 ## Features
+
 - **Remove Hindi Section**: Automatically replace the Hindi section from each page with english which results in 50% page reduction.
 - **Delete Extra Pages**: Option to delete promotional or instruction pages from the start and end of the PDF.
 - **Add Mark Sheet**: Adds a mark sheet image to the front page of the PDF which can be used for analysing tests.
 
 ## Prerequisites
+
 Ensure you have the following dependencies installed:
 
 ```sh
@@ -16,6 +19,7 @@ pip install pillow pdf2image
 ```
 
 ## Installation
+
 Clone the repository and navigate into the project folder:
 
 ```sh
@@ -24,9 +28,10 @@ cd pdf-overlapper
 ```
 
 ## Usage
+
 1. Place your target PDF file in the project directory.
 2. Rename the file like `UBT-04.pdf` and update `input_file_name` in the `main.py` file.
-4. Run the script:
+3. Run the script:
 
 ```sh
 python main.py
@@ -35,6 +40,7 @@ python main.py
 The cleaned PDF will be generated with the name `<original_name>-Paper-Clean.pdf` in the same directory.
 
 ## Configuration
+
 Modify the following variables in the script(`main.py`) for customization:
 
 - `english_on_right`: Set `True` if English questions are on the right side of the orginal pdf.
@@ -59,18 +65,23 @@ delete_page_from_end = 2  # if there are extra promotional pages
 ```
 
 ## Example
+
 Original PDF:
+
 ```
 Page 1: Hindi | English
 Page 2: Hindi | English
 ```
+
 ![UBT-04.jpg](UBT-04.jpg)
 
 After processing:
+
 ```
 Page 1: English (from Page 1) | English (from Page 2)
 Page 2: English (from Page 3) | English (from Page 4)
 ```
+
 ![UBT-04-cleaned.jpg](UBT-04-cleaned.jpg)
 
 ## Contributing
@@ -89,7 +100,7 @@ If you have any questions or need further assistance, please open an issue on th
 
 ## Fair Use Disclaimer
 
-This tool is intended for educational and personal use only. It is designed to assist students in processing NEET 
-examination test papers provided by New Light Institute. The authors of this tool do not claim ownership of the original 
-content and do not endorse any unauthorized distribution of copyrighted material. Users are responsible for ensuring 
+This tool is intended for educational and personal use only. It is designed to assist students in processing NEET
+examination test papers provided by New Light Institute. The authors of this tool do not claim ownership of the original
+content and do not endorse any unauthorized distribution of copyrighted material. Users are responsible for ensuring
 their usage complies with applicable copyright laws and institutional policies.
