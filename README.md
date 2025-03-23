@@ -19,7 +19,7 @@ pip install pillow pdf2image
 Clone the repository and navigate into the project folder:
 
 ```sh
-git clone <repository_url>
+git clone https://github.com/ManabBala/pdf-overlapper.git
 cd pdf-overlapper
 ```
 
